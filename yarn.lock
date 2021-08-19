@@ -583,10 +583,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-henderea@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-henderea/-/eslint-config-henderea-1.0.3.tgz#922266e987851e9651f48f7ff92d318d7eb79f46"
-  integrity sha512-QNN3+lM2dOZ5wK+9goLcsko1WIh3BQ5IrGgQAD738fzNjQ4gVgvLGsKG4cfls3PMUQVVN5s+3flkPMgkWlhxSw==
+eslint-config-henderea@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-henderea/-/eslint-config-henderea-1.0.4.tgz#913f6f19ae05a586991789fe4b2f163eeddef879"
+  integrity sha512-WRq/WrgenOXOe7+cHFbU+gt8LFaFEI9WMaeuKcFuWN4X9QF165auTPyz1Fgd8y4H/fGAXkJj0v3fcw1BwCwMcw==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
@@ -604,7 +604,7 @@ eslint-module-utils@^2.6.2:
     debug "^3.2.7"
     pkg-dir "^2.0.0"
 
-eslint-plugin-import@^2.24.0:
+eslint-plugin-import@^2.24.1:
   version "2.24.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.24.1.tgz#64aba8b567a1ba9921d5465586e86c491b8e2135"
   integrity sha512-KSFWhNxPH8OGJwpRJJs+Z7I0a13E2iFQZJIvSnCu6KUs4qmgAm3xN9GYBCSoiGWmwA7gERZPXqYQjcoCROnYhQ==

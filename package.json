@@ -9,6 +9,7 @@
   },
   "author": "Eric Henderson <henderea@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/henderea/my-ncc",
   "dependencies": {
     "@henderea/arg-helper": "^1.2.1",
     "@henderea/simple-colors": "^1.5.0",
@@ -19,8 +20,8 @@
     "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
     "eslint": "^7.32.0",
-    "eslint-config-henderea": "1.0.3",
-    "eslint-plugin-import": "^2.24.0"
+    "eslint-config-henderea": "1.0.4",
+    "eslint-plugin-import": "^2.24.1"
   },
   "bin": {
     "my-ncc": "./bin/my-ncc.js"
