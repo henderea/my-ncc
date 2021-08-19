@@ -1,6 +1,6 @@
 {
   "name": "@henderea/my-ncc",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "My custom wrapper around @vercel/ncc to avoid ESM output",
   "main": "index.js",
   "scripts": {
