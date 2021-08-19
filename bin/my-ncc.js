@@ -47,7 +47,7 @@ if('externals' in options) {
 if('minify' in options) {
   nccOpts.minify = options.minify;
 }
-const outputDir = options.outputDir || '.';
+const outputDir = options.outputDir || 'dist';
 if('quiet' in options) {
   nccOpts.quiet = options.quiet;
 }
@@ -71,8 +71,16 @@ function ensureDir(filePath) {
   }
 }
 
-ncc(filePath, nccOpts).then(({ code }) => {
+ncc(filePath, nccOpts).then(({ code, map, assets }) => {
   const filePath = path.resolve(outputDir, 'index.js');
   ensureDir(filePath);
   fs.writeFileSync(filePath, code);
+  if(map) {
+    fs.writeFileSync(path.resolve(outputDir, `index.js.map`), map);
+  }
+  Object.keys(assets).forEach((asset) => {
+    const assetPath = path.resolve(outputDir, asset);
+    ensureDir(assetPath);
+    fs.writeFileSync(assetPath, assets[asset].sourceMap, { mode: assets[asset].permissions });
+  });
 });
