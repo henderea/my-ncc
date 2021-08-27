@@ -6,7 +6,7 @@
   "scripts": {
     "ncc:build": "yarn ncc:clean && yarn ncc:build:release",
     "ncc:clean": "rm -rf dist",
-    "ncc:build:release": "node ./bin/my-ncc.mjs ./bin/my-ncc.mjs -m -q -f dist/index.js",
+    "ncc:build:release": "node ./bin/my-ncc.mjs ./bin/my-ncc.mjs -m -q -o dist",
     "prepublishOnly": "yarn ncc:build",
     "lint": "eslint --ext .js,.mjs bin",
     "lint:fix": "eslint --ext .js,.mjs --fix bin"
@@ -29,7 +29,7 @@
     "my-ncc": "./dist/index.js"
   },
   "files": [
-    "./dist/index.js"
+    "./dist"
   ],
   "eslintConfig": {
     "extends": "henderea"
