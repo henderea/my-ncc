@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 
-const ncc = require('@vercel/ncc');
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-const { argParser } = require('@henderea/arg-helper')(require('arg'));
+import ncc from '@vercel/ncc';
 
-const { style, styles } = require('@henderea/simple-colors');
+import argHelper from '@henderea/arg-helper';
+import arg from 'arg';
+const { argParser } = argHelper(arg);
+
+import { style, styles } from '@henderea/simple-colors';
 const { bold, red } = styles;
 const boldRed = style(bold, red.bright);
 
@@ -72,15 +75,21 @@ function ensureDir(filePath) {
 }
 
 ncc(filePath, nccOpts).then(({ code, map, assets }) => {
-  const filePath = path.resolve(outputDir, 'index.js');
-  ensureDir(filePath);
-  fs.writeFileSync(filePath, code);
-  if(map) {
-    fs.writeFileSync(path.resolve(outputDir, `index.js.map`), map);
+  if(options.outputFile) {
+    const filePath = path.resolve(options.outputFile);
+    ensureDir(filePath);
+    fs.writeFileSync(filePath, code);
+  } else {
+    const filePath = path.resolve(outputDir, 'index.js');
+    ensureDir(filePath);
+    fs.writeFileSync(filePath, code);
+    if(map) {
+      fs.writeFileSync(path.resolve(outputDir, `index.js.map`), map);
+    }
+    Object.keys(assets).forEach((asset) => {
+      const assetPath = path.resolve(outputDir, asset);
+      ensureDir(assetPath);
+      fs.writeFileSync(assetPath, assets[asset].source, { mode: assets[asset].permissions });
+    });
   }
-  Object.keys(assets).forEach((asset) => {
-    const assetPath = path.resolve(outputDir, asset);
-    ensureDir(assetPath);
-    fs.writeFileSync(assetPath, assets[asset].sourceMap, { mode: assets[asset].permissions });
-  });
 });
