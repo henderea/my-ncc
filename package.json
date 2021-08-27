@@ -4,33 +4,34 @@
   "description": "My custom wrapper around @vercel/ncc to avoid ESM output",
   "main": "index.js",
   "scripts": {
-    "ncc:build": "yarn ncc:clean && yarn ncc:build:release",
-    "ncc:clean": "rm -rf dist",
-    "ncc:build:release": "node ./bin/my-ncc.mjs ./bin/my-ncc.mjs -m -q -o dist",
-    "prepublishOnly": "yarn ncc:build",
     "lint": "eslint --ext .js,.mjs bin",
     "lint:fix": "eslint --ext .js,.mjs --fix bin"
   },
   "author": "Eric Henderson <henderea@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/henderea/my-ncc",
-  "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/eslint-parser": "^7.15.0",
+  "dependencies": {
     "@henderea/arg-helper": "^1.2.1",
     "@henderea/simple-colors": "^1.5.0",
     "@vercel/ncc": "^0.30.0",
-    "arg": "^5.0.1",
+    "arg": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
     "eslint": "^7.32.0",
     "eslint-config-henderea": "1.0.7",
     "eslint-plugin-import": "^2.24.2"
   },
   "bin": {
-    "my-ncc": "./dist/index.js"
+    "my-ncc": "./bin/my-ncc.mjs"
   },
   "files": [
-    "dist"
+    "bin"
   ],
+  "engines": {
+    "node": ">=12"
+  },
   "eslintConfig": {
     "extends": "henderea"
   }
