@@ -29,7 +29,7 @@
     "my-ncc": "./dist/index.js"
   },
   "files": [
-    "./dist"
+    "dist"
   ],
   "eslintConfig": {
     "extends": "henderea"
