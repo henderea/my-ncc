@@ -232,15 +232,17 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@henderea/arg-helper@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@henderea/arg-helper/-/arg-helper-1.2.1.tgz#c04f96f1153b6dc0d44e0d564a076c873186c7bb"
-  integrity sha512-odhIeuhG/91i96i9zyh4+7ev4Cc9W0xH2JHUt7hdaiJ7Z/EnDAWM9uUTmNWIEepuFn5PzhVIeL1wqAJPMp5EUA==
+"@henderea/arg-helper@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@henderea/arg-helper/-/arg-helper-1.2.2.tgz#4c5b84a22e1a0c9ae486f6b7f5920a42ed70c482"
+  integrity sha512-0+wGfzoGZLXmuQouFZBaZ//VhO/Do+ZAypJ01TP/grp+HXOJHLxfry1vMQBRPSNhoPB7oTt0fQs9rEnebJWEqQ==
+  dependencies:
+    escalade "^3.1.1"
 
-"@henderea/simple-colors@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@henderea/simple-colors/-/simple-colors-2.0.0.tgz#5815095ad22f1d0722501df39fae8a683e734cdc"
-  integrity sha512-ma2lbHU2zcDjWuttxcBn0WXifL4HeznpA27IBDRPAZ7maXyrbL+n3ep8gRkrTwC/H4ZjWp5NIh0gvEzFG0xFeA==
+"@henderea/simple-colors@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@henderea/simple-colors/-/simple-colors-2.0.2.tgz#563fdac1bf1fedfdf74cbc632d183578992a961e"
+  integrity sha512-AV9UcGJ9bSmlPHumO/GqLC/Qzc0k1VH1ftFNAr+64RkqVjJ7BslGtE/ENJvnKs2/DifeP32QMdHjFiPPtk9PtA==
   dependencies:
     lodash "^4.17.21"
     strip-ansi "^7.0.0"

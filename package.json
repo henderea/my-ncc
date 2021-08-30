@@ -11,8 +11,8 @@
   "license": "MIT",
   "repository": "https://github.com/henderea/my-ncc",
   "dependencies": {
-    "@henderea/arg-helper": "^1.2.1",
-    "@henderea/simple-colors": "^2.0.0",
+    "@henderea/arg-helper": "^1.2.2",
+    "@henderea/simple-colors": "^2.0.2",
     "@vercel/ncc": "^0.30.0",
     "arg": "^5.0.1"
   },
