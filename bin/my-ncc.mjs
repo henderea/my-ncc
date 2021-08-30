@@ -2,6 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 import ncc from '@vercel/ncc';
 
@@ -25,6 +26,7 @@ try {
     .bool('sourceMap', '-s', '--source-map')
     .bool('watch', '-w', '--watch')
     .bool('transpileOnly', '-t', '--transpile-only')
+    .findVersion(fileURLToPath(import.meta.url), '--version')
     .argv;
 } catch (e) {
   console.error(red.bright(`${bold('Error in arguments:')} ${e.message}`));
