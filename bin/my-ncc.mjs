@@ -14,6 +14,16 @@ import { style, styles } from '@henderea/simple-colors';
 const { bold, red } = styles;
 const boldRed = style(bold, red.bright);
 
+
+let dirname = fileURLToPath(import.meta.url);
+
+try {
+  dirname = eval('__dirname');
+} catch {
+  //empty
+}
+
+
 let options = null;
 try {
   options = argParser()
@@ -26,7 +36,7 @@ try {
     .bool('sourceMap', '-s', '--source-map')
     .bool('watch', '-w', '--watch')
     .bool('transpileOnly', '-t', '--transpile-only')
-    .findVersion(fileURLToPath(import.meta.url), '--version')
+    .findVersion(dirname, '--version')
     .argv;
 } catch (e) {
   console.error(red.bright(`${bold('Error in arguments:')} ${e.message}`));
