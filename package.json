@@ -13,7 +13,7 @@
   "dependencies": {
     "@henderea/arg-helper": "^1.2.2",
     "@henderea/simple-colors": "^2.0.2",
-    "@vercel/ncc": "^0.30.0",
+    "@vercel/ncc": "^0.33.0",
     "arg": "^5.0.1"
   },
   "devDependencies": {
