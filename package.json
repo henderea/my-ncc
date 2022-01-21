@@ -17,10 +17,10 @@
     "arg": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.7",
+    "@babel/core": "^7.16.10",
     "@babel/eslint-parser": "^7.16.5",
-    "eslint": "^8.6.0",
-    "eslint-config-henderea": "1.0.10",
+    "eslint": "^8.7.0",
+    "eslint-config-henderea": "1.0.12",
     "eslint-plugin-import": "^2.25.4"
   },
   "bin": {
